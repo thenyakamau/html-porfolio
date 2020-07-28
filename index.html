@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto+Slab:wght@500&family=Russo+One&display=swap" rel="stylesheet" />
+    <link id="theme-style" rel="stylesheet" href="" />
+    <link rel="icon" href="/images/logo.png" />
     <title>Porfolio</title>
 </head>
 
@@ -35,10 +37,10 @@
                         Personalize Theme
                     </h5>
                     <div id="theme-options-wrapper">
-                        <div class="theme-dot" id="light-mode"></div>
-                        <div class="theme-dot" id="blue-mode"></div>
-                        <div class="theme-dot" id="green-mode"></div>
-                        <div class="theme-dot" id="purple-mode"></div>
+                        <div data-mode="light" class="theme-dot" id="light-mode"></div>
+                        <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
+                        <div data-mode="green" class="theme-dot" id="green-mode"></div>
+                        <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
                     </div>
                     <p id="setting-note">
                         *Theme setting will be saved for <br /> your next visit
@@ -128,15 +130,77 @@
       <div class="main-container">
         <h3 style="text-align: center;">Some of my sample projects</h3>
         <div class="post-wrapper">
-          <img src="" alt="" />
+          <div>
+            <div class="post">
+              <img src="images/thenya_cv.png" alt="" />
+              <div class="post-preview">
+                <h6 class="post-title">Thenya CV</h6>
+                <p class="post-intro">
+                  Personal site template that allows potential clients and
+                  employers to apply for websites. Made with Node js and React
+                  js.
+                </p>
+                <a target="_blank" href="https://thenya.herokuapp.com/"
+                  >See site</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img src="images/amir_image.jpg" alt="" />
+              <div class="post-preview">
+                <h6 class="post-title">Amir Art</h6>
+                <p class="post-intro">
+                  E commerce art site that displays and sells paintings place
+                  for artists and art enthusiast. Made with Laravel php and
+                  React js.
+                </p>
+                <a target="_blank" href="https://amirarts.herokuapp.com/Art"
+                  >See site</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img src="images/safe_sacco.jpg" alt="" />
+              <div class="post-preview">
+                <h6 class="post-title">Safe Sacco</h6>
+                <p class="post-intro">
+                  Travel website that tracts saccos and allows user to order a
+                  sacco also allows tracking of drivers. Made with Django python
+                  and react js
+                </p>
+                <a target="_blank" href="https://safesacco.herokuapp.com/"
+                  >See site</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="s2">
       <div class="main-container">
-        Contact
+        <h3 style="text-align: center;">Get In Touch</h3>
+        <form id="contact-form">
+          <label for="">Name</label>
+          <input type="text" class="input-field" name="name" />
+          <label for="">Email</label>
+          <input type="email" class="input-field" name="email" />
+          <label for="">Phone</label>
+          <input type="text" class="input-field" name="phone" />
+          <label for="">Message</label>
+          <textarea name="message" rows="6" class="input-field"></textarea>
+          <input id="submit-btn" type="submit" value="Send" />
+        </form>
       </div>
     </section>
+
+    <script src="app.js"></script>
   </body>
 </html>

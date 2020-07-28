@@ -7,12 +7,17 @@
     --themeDotBorder: #24292e;
     --previewBg: rgba(251, 249, 243, 0.8);
     --previewShadow: #f0ead6;
+    --buttonColor: black;
 }
 
 html,
 body {
     padding: 0;
     margin: 0;
+}
+
+body * {
+    transition: 0.8s;
 }
 
 h1,
@@ -33,6 +38,7 @@ span,
 label,
 input,
 textarea {
+    color: var(--secondaryText);
     font-family: "Roboto Mono", monospace;
 }
 
@@ -118,6 +124,10 @@ ul {
 #navigation {
     margin: 0;
     padding: 10px;
+}
+
+#navigation a {
+    color: var(--mainText);
 }
 
 #navigation li {
@@ -243,7 +253,7 @@ ul {
     width: 7px;
     border-radius: 50%;
     border: 1.5px solid #17a2b8;
-    background-color: var(--secondaryColor);
+    background-color: #ffffff;
     position: absolute;
 }
 
@@ -289,6 +299,83 @@ ul {
 
 #social-img {
     width: 100%;
+}
+
+.post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.post {
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.post img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+}
+
+.post-preview {
+    background-color: #ffffff;
+    padding: 14px;
+}
+
+.post-title {
+    margin: 0;
+    color: black;
+}
+
+.post-intro {
+    color: #4b5156;
+    font-size: 16px;
+}
+
+#contact-form {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+#contact-form label {
+    line-height: 2.7em;
+}
+
+#contact-form textarea {
+    font-size: 14px;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ffffff;
+    background-color: var(--buttonColor);
+    border: none;
+    cursor: pointer;
+}
+
+.input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
 }
 
 @media screen and (max-width: 1200px) {
