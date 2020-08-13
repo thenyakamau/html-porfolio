@@ -378,6 +378,107 @@ ul {
     font-size: 14px;
 }
 
+.button {
+    display: inline-block;
+    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding: 0.8em 1.4em;
+    padding-right: 4.7em;
+    background: var(--buttonColor);
+    border: none;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.button::before::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 2.8em;
+    content: "\00a0";
+    font-family: "Russo One", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    transition: 0.2s;
+    transform-origin: 50% 60%;
+    cursor: pointer;
+}
+
+.button {
+    min-width: 15em;
+}
+
+.arrow {
+    background: var(--mainColor);
+}
+
+.arrow:hover {
+    background: darken(var(--mainColor), 10%);
+}
+
+.arrow:focus:active {
+    outline: none;
+    background: darken(var(--mainColor), 10%);
+}
+
+.arrow::after {
+    content: "\F054";
+}
+
+.arrow:hover::after {
+    -webkit-animation: bounceright 0.3s alternate ease infinite;
+    animation: bounceright 0.3s alternate ease infinite;
+}
+
+._modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_content {
+    background-color: var(--secondaryColor);
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    color: var(--mainText);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modal_open;
+    animation-duration: 3s;
+}
+
+@keyframes model_open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.close_btn {
+    color: #cccccc;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close_btn:hover,
+.close_btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1200px) {
     .main-container {
         width: 95%;

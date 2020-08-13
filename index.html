@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="minesweep.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto+Slab:wght@500&family=Russo+One&display=swap" rel="stylesheet" />
@@ -195,7 +196,7 @@
 
     <section class="s2">
       <div class="main-container">
-        <h3 style="text-align: center;">Get In Touch</h3>
+        <!-- <h3 style="text-align: center;">Get In Touch</h3>
         <form id="contact-form">
           <label for="">Name</label>
           <input type="text" class="input-field" name="name" />
@@ -206,10 +207,61 @@
           <label for="">Message</label>
           <textarea name="message" rows="6" class="input-field"></textarea>
           <input id="submit-btn" type="submit" value="Send" />
-        </form>
+        </form> -->
+        <div class="about-wrapper">
+          <div class="game-intro">
+            <h4>Sample Games</h4>
+            <p>
+              The next step for me is game development i want to create great
+              games with expansive worlds but since that maybe take a while I am
+              taking small steps towards actualizing that dream enjoy a few
+              projects of retro games am working on.
+            </p>
+          </div>
+          <div class="social-links">
+            <img id="social-img" src="images/minesweeper_img.png" alt="" />
+            <h3>Play Minesweeper</h3>
+            <button id="btn-game" class="button">Start Game</button>
+          </div>
+        </div>
       </div>
     </section>
 
+    <div id="simpleModal" class="_modal">
+      <div class="modal_content">
+        <span id="closeBtn" class="close_btn">&times;</span>
+        <div class="modal-header">
+          <center>
+            <h3>Play Minesweeper</h3>
+          </center>
+        </div>
+        <div class="modal-body">
+          <center><div class="grid"></div></center>
+        </div>
+      </div>
+    </div>
+
+    <div id="responseModal" class="_modal">
+      <div class="modal_content">
+        <div class="modal-header">
+          <center id="response-center">
+            <!-- <h3>You have</h3> -->
+          </center>
+        </div>
+        <div class="modal-body">
+          <center>
+            <h4>Want to play again?</h4>
+            <div class="response_items">
+              <button class="button">Play Again</button>
+              <button class="button">Cancel</button>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
+    <script src="modal.js"></script>
+    <script src="minesweep.js"></script>
   </body>
 </html>
